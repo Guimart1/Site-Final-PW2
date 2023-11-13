@@ -51,6 +51,12 @@ html::-webkit-scrollbar-thumb{
 }
 .header .logoContent .logo img{
     height: 4rem;
+    margin-bottom: 10px;
+}
+.logoName {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: bolder;
 }
 .header .logoContent .logoName {
     color: var(--black);
@@ -169,3 +175,52 @@ html::-webkit-scrollbar-thumb{
     font-weight: bold;
     color: #e4e4e4;
 }
+
+.footer {
+    top: 0; right: 0;left: 0;
+    height: 300px;
+    width: 100%;
+    background-color: var(--white);
+    justify-content: space-evenly; 
+}
+.footerText{
+    font-size: 1.3em;
+    text-align: justify;
+}
+.boxFooter{
+    border: 2px solid red;
+
+}
+#endereco div{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    margin-bottom: 10px;
+}
+.adressInfo:hover{
+    transform: translateX(5px);
+}
+.boxFooter div span{
+    font-size: 2em;
+}
+.social-container{
+    display:grid;
+    grid-template-columns: repeat(5, 4.125em);
+}
+
+.social{
+    margin: .125em;
+    width: 30px;
+    height: 30px;
+    font-size: 1.5em;
+    color: rgb(19, 19, 19);
+    border-radius: 50%;
+    display: grid;
+    place-items:center;
+    border: 2px solid rgb(19, 19, 19);
+}
+.social:hover{
+    background-color: #1B1722;
+    color: #fff;
+}
+
