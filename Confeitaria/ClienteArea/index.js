@@ -89,3 +89,4 @@ var swiper = new Swiper(".blogs-row", {
       },
     },
   });
+  
