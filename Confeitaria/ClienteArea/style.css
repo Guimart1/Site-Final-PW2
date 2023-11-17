@@ -15,7 +15,6 @@ body {
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: .2s linear;
 }
 html{
@@ -45,6 +44,7 @@ html::-webkit-scrollbar-thumb{
     z-index: 999;
     background: transparent;
     backdrop-filter: blur(5px);
+    text-transform: capitalize;
 }
 .header .logoContent{
     display: flex;
@@ -236,3 +236,4 @@ li::before {
     color: rgb(253, 33, 33);
     transform: translateX(5px);
 }
+
