@@ -64,7 +64,7 @@
         }
         public static function checkCredentials($email, $senha){
             $conexao = Conexao::conectar();
-            $query = "SELECT * FROM tbAdm WHERE emailAdm = ? and passwordUser = ?";
+            $query = "SELECT * FROM tbAdm WHERE emailAdm = ? and senhaAdm = ?";
             $stmt = $conexao->prepare($query);
             $stmt->bindValue(1, $email);
             $stmt->bindValue(2, $senha);

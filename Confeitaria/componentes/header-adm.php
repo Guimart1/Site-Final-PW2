@@ -5,7 +5,7 @@
         <img src="./../../img/site/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
       </a>
       <div class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ms-3 fw-bold">
-        FilmeOn
+        Bolletos
       </div>
 
       <div class="dropdown text-end">
