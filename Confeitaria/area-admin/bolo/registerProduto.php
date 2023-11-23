@@ -9,7 +9,7 @@
     $decoracao_Bolo= $BoloDao['decoracaoBolo'];
     $desc_Bolo = $BoloDao['descBolo'];
     $peso_Bolo = $BoloDao['pesoBolo'];
-    $especificacao_Bolo = $BoloDao['especifcacaoBolo'];
+    $especificacao_Bolo = $BoloDao['especificacaoBolo'];
     $valor_Bolo = $BoloDao['valorBolo'];
     $imagem_Bolo = $BoloDao['fotoBolo'];
     }else{
@@ -19,7 +19,7 @@
       $decoracao_Bolo= '';
       $desc_Bolo = '';
       $peso_Bolo = '';
-      $especificao_Bolo = '';
+      $especificacao_Bolo = '';
       $valor_Bolo = '';
       $imagem_Bolo = '';
       $id_Bolo = '';
@@ -107,21 +107,33 @@
                     <label for="descBolo" class="col-form-label">Descrição:</label>
                     <input type="text" class="form-control" name="descBolo" maxlength="100" value="<?=$desc_Bolo?>" required>
                     <div class="invalid-feedback">
-                      E-mail Inválido
+                      Descrição Inválida
                     </div>
                   </div>
                   <div class="col-md-3">
-                    <label for="senha" class="col-form-label">Senha:</label>
-                    <input type="password" class="form-control" name="senha" value="<?=$password_User?>" maxlength="10"
-                      id="senha" required>
+                    <label for="pesoBolo" class="col-form-label">Peso:</label>
+                    <input type="number" class="form-control" name="pesoBolo" value="<?=$peso_Bolo?>"
+                      id="pesoBolo" required>
                     <div class="invalid-feedback">
-                      Senha Inválido
+                      Peso Inválido
                     </div>
                   </div>
+                  <div class="col-md-6">
+                    <label for="especificacaoBolo" class="col-form-label">Especificações:</label>
+                    <input type="text" class="form-control" name="especificacaoBolo" maxlength="100" value="<?=$especificacao_Bolo?>" required>
+                    <div class="invalid-feedback">
+                      Especificação Inválida
+                    </div>
                 </div>
+                <div class="col-md-6">
+                    <label for="valorBolo" class="col-form-label">Valor:</label>
+                    <input type="number" class="form-control" name="valorBolo" maxlength="100" value="<?=$valor_Bolo?>" required>
+                    <div class="invalid-feedback">
+                      Valor Inválido
+                    </div>
                 <div class="row mt-5 ">
                   <div class="col-md-2">
-                    <input type="file" id="foto" name="foto" accept="image/*" class="custom-file-input">
+                    <input type="file" id="fotoBolo" name="fotoBolo" accept="image/*" class="custom-file-input">
                   </div>
                   <div class=" text-end  col-md-10">
                   <a class=" btn btn-primary px-3" role="button" aria-disabled="true" href="index.php">Voltar</i></a>
