@@ -34,7 +34,7 @@
             Lista de Bolos
           </div>
           <div class="col text-end ">
-            <a class="btn btn-success px-3" role="button" aria-disabled="true" href="registerProduto.php"><i
+            <a class="btn btn-success px-3" role="button" aria-disabled="true" href="register.php"><i
                 class="fas fa-plus" aria-hidden="true"></i></a>
           </div>
         </div>
@@ -53,14 +53,14 @@
               <?php foreach($bolos as $produto) { ?>
               <tr>
                 <td><?=$produto[0]?></td>
-                <td><?= date('d/m/Y', strtotime($produto[3]));  ?></td>
-                <td><?=$produto[1]?> <?=$produto[2]?></td>
-                <td><?=$produto[4]?></td>
-                <td><?=$produto[7]?></td>
+                <td><?=$produto[1]?></td>
+                <td><?=$produto[2]?></td>
+                <td><?=$produto[6]?></td>
+                <td><?=$produto[8]?></td>
                 <td class="text-center">
                   <form action="process.php" method="POST">
                     <input type="hidden" class="form-control" id="acao" name="acao" value="SELECTID">
-                    <input type="hidden" class="form-control" id="id" name="id" value="<?=$adm[0]?>">
+                    <input type="hidden" class="form-control" id="id" name="id" value="<?=$produto[0]?>">
                     <button type="submit" class="dropdown-item" ><i
                         class="fas fa-edit fa-lg text-secondary"></i>
                     </button>

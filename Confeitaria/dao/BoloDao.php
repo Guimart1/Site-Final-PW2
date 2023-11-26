@@ -4,17 +4,17 @@
     class BoloDao{
         public static function insert($bolo){
             $conexao = Conexao::conectar();
-            $query = "INSERT INTO tbBolo (nomeBolo, saborBolo, coberturaBolo, decoracaoBolo, descBolo, pesoBolo,especificacaoBolo, valorBolo, fotoBolo) VALUES (?,?,?,?,?,?,?,?)";
+            $query = "INSERT INTO tbbolo (nomeBolo, saborBolo, coberturaBolo, decoracaoBolo, descBolo, pesoBolo,especificacaoBolo, valorBolo, fotoBolo) VALUES (?,?,?,?,?,?,?,?,?)";
             $stmt = $conexao->prepare($query);
-            $stmt->bindValue(1, $bolo->getNomeBolo());
-            $stmt->bindValue(2, $bolo->getSaborBolo());
-            $stmt->bindValue(3, $bolo->getCoberturaBolo());
-            $stmt->bindValue(4, $bolo->getDecoracaoBolo());
-            $stmt->bindValue(5, $bolo->getDescBolo());
-            $stmt->bindValue(6, $bolo->getPesoBolo());
-            $stmt->bindValue(7, $bolo->getEspecificacaoBolo());
-            $stmt->bindValue(8, $bolo->getValorBolo());
-            $stmt->bindValue(9, $bolo->getFotoBolo());
+            $stmt->bindValue(1, $bolo->getNome());
+            $stmt->bindValue(2, $bolo->getSabor());
+            $stmt->bindValue(3, $bolo->getCobertura());
+            $stmt->bindValue(4, $bolo->getDecoracao());
+            $stmt->bindValue(5, $bolo->getDesc());
+            $stmt->bindValue(6, $bolo->getPeso());
+            $stmt->bindValue(7, $bolo->getEspecificacao());
+            $stmt->bindValue(8, $bolo->getValor());
+            $stmt->bindValue(9, $bolo->getFoto());
             $stmt->execute();
         }
         public static function selectAll(){
@@ -49,19 +49,19 @@
             descBolo = ?, 
             pesoBolo = ?, 
             especificacaoBolo = ?, 
-            valorBolo = ? 
+            valorBolo = ? ,
             fotoBolo = ? 
             WHERE idBolo = ?";
             $stmt = $conexao->prepare($query);
-            $stmt->bindValue(1, $bolo->getNomeBolo());
-            $stmt->bindValue(2, $bolo->getSaborBolo());
-            $stmt->bindValue(3, $bolo->getCoberturaBolo());
-            $stmt->bindValue(4, $bolo->getDecoracaoBolo());
-            $stmt->bindValue(5, $bolo->getDescBolo());
-            $stmt->bindValue(6, $bolo->getPesoBolo());
-            $stmt->bindValue(7, $bolo->getEspecificacaoBolo());
-            $stmt->bindValue(8, $bolo->getValorBolo());
-            $stmt->bindValue(9, $bolo->getFotoBolo());
+            $stmt->bindValue(1, $bolo->getNome());
+            $stmt->bindValue(2, $bolo->getSabor());
+            $stmt->bindValue(3, $bolo->getCobertura());
+            $stmt->bindValue(4, $bolo->getDecoracao());
+            $stmt->bindValue(5, $bolo->getDesc());
+            $stmt->bindValue(6, $bolo->getPeso());
+            $stmt->bindValue(7, $bolo->getEspecificacao());
+            $stmt->bindValue(8, $bolo->getValor());
+            $stmt->bindValue(9, $bolo->getFoto());
             $stmt->bindValue(10, $id); // Certifique-se de que o ID seja o terceiro valor
             return $stmt->execute();
         }

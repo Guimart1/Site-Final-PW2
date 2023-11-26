@@ -56,7 +56,7 @@
           <form method="post" action="process.php" enctype="multipart/form-data" class="needs-validation" novalidate>
             <div class="card-header">
               <strong>INFORMAÇÕES DO BOLO</strong>
-              <input type="hidden" name="idBolo" id="idBolo" placeholder="id" value="<?=$id_Bolo?>">
+              <input type="hidden" name="idProduto" id="idProduto" placeholder="id" value="<?=$id_Bolo?>">
               <input type="hidden" name="fotoBolo" id="fotoBolo" placeholder="foto bolo" value="<?=$imagem_Bolo?>">
               <input type="hidden" value="<?=$id_Bolo?'ATUALIZAR':'SALVAR'?>" name="acao" >
 
@@ -64,7 +64,7 @@
             <div class="card-body row" style="align-items: center; justify-content: center;">
               <div class="col-md-2   text-center" >
                 <div class="bg-white rounded border" >
-                  <img id="preview" src="../../img/user/<?=$imagem_Bolo!="" ? $imagem_Bolo : 'padrao.png';?>" alt="..."
+                  <img id="preview" src="../../img/bolos/<?=$imagem_Bolo!="" ? $imagem_Bolo : 'vetorBolo.jpg';?>" alt="..."
                     class="rounded  w-100  "  style="height:200px; object-fit: cover; border:4px solid #ccc" >
                 </div>
               </div>
@@ -88,7 +88,7 @@
                   </div>
                   <div class="col-md-3 mb-3">
                     <label for="coberturaBolo" class="col-form-label">Cobertura:</label>
-                    <input type="text" class="form-control" name="coberturaBolos" maxlength="30" id="coberturaBolo"
+                    <input type="text" class="form-control" name="coberturaBolo" maxlength="30" id="coberturaBolo"
                      value="<?=$cobertura_Bolo?>" required>
                     <div class="invalid-feedback">
                       Cobertura Inválida
