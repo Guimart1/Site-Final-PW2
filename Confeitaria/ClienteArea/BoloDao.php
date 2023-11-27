@@ -1,5 +1,5 @@
 <?php
-    require_once '../../model/Conexao.php';
+    require_once '../model/Conexao.php';
     
     class BoloDao{
         public static function insert($bolo){

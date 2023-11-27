@@ -160,6 +160,7 @@ html::-webkit-scrollbar-thumb{
     html{
         font-size: 50%;
     }
+
 }
 #box{
     background-color: rgba(0, 0, 0, 0.4);
@@ -236,4 +237,9 @@ li::before {
     color: rgb(253, 33, 33);
     transform: translateX(5px);
 }
-
+@media screen and (max-width: 600px) {
+    #barrier {
+        margin-top: 10%;
+    }
+    
+}
