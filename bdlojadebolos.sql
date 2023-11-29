@@ -45,7 +45,7 @@ CREATE TABLE `tbadm` (
 -- Estrutura da tabela `tbavaliacabbolo`
 --
 
-CREATE TABLE `tbavaliacabbolo` (
+CREATE TABLE `tbavaliacaobolo` (
   `idDepoimento` int(11) NOT NULL,
   `tituloDepoimento` varchar(30) DEFAULT NULL,
   `textoDepoimento` varchar(300) DEFAULT NULL,

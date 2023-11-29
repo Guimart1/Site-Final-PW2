@@ -12,7 +12,7 @@
  switch ($_POST["acao"]) {
   case 'DELETE':
    try {
-        $ClienteDao = ClienteDao::delete($_POST['idDeletar']);
+        $ClienteDao = ClienteDao::delete($_POST['idDeletarCliente']);
         header("Location: index.php");
     } catch (Exception $e) {
       echo 'Exceção capturada: ',  $e->getMessage(), "\n";
@@ -39,11 +39,11 @@
     break;
   case 'ATUALIZAR':
         //pode validar as informações
-        $cliente->setNomeCliente($_POST['nome']);
-        $cliente->setSobrenomeCliente($_POST['sobrenome']);
-        $cliente->setEmailCliente($_POST['email']);
-        $cliente->setSenhaCliente($_POST['senha']);
-        $cliente->setFotoCliente($cliente->salvarImagem($_POST['nomeFoto'])); 
+        $cliente->setNomeCliente($_POST['nomeCliente']);
+        $cliente->setSobrenomeCliente($_POST['sobrenomeCliente']);
+        $cliente->setEmailCliente($_POST['emailCliente']);
+        $cliente->setSenhaCliente($_POST['senhaCliente']);
+        $cliente->setFotoCliente($cliente->salvarImagem($_POST['nomeFotoCliente'])); 
         $cliente->setTokenCliente($cliente->generateToken());
         try {
           $ClienteDao = ClienteDao::update($_POST["idUser"], $cliente);
@@ -67,13 +67,5 @@
 
   
     break;
-
-
   }
-
-
-
-
- 
-
 ?>
