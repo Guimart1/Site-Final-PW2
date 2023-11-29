@@ -29,7 +29,7 @@
     $bolo->setPeso($_POST['pesoBolo']);
     $bolo->setEspecificacao($_POST['especificacaoBolo']);
     $bolo->setValor($_POST['valorBolo']);
-    $bolo->setFoto($bolo->salvarImagem($_POST['fotoBolo'])); 
+    $bolo->setFotoBolo($bolo->salvarImagem($_POST['fotoBolo'])); 
     try {
       $BoloDao = BoloDao::insert($bolo);
       $msg->setMensagem("Bolo Cadastrado com sucesso.", "bg-success");
@@ -50,13 +50,13 @@
     $bolo->setPeso($_POST['pesoBolo']);
     $bolo->setEspecificacao($_POST['especificacaoBolo']);
     $bolo->setValor($_POST['valorBolo']);
-    $bolo->setFoto($bolo->salvarImagem($_POST['fotoBolo'])); 
+    $bolo->setFotoBolo($bolo->salvarImagem($_POST['fotoBolo'])); 
         try {
           $BoloDao = BoloDao::update($_POST["idProduto"], $bolo);
-          $msg->setMensagem("Usuário Atualizado com sucesso.", "bg-success");
+          $msg->setMensagem("Bolo Atualizado com sucesso.", "bg-success");
           header("Location: index.php");
         } catch (Exception $e) {
-         echo 'Exceção capturada: ',  $e->getMessage(), "\n";
+         echo 'Verifique as informações digitadas. ',  $e->getMessage(), "\n";
 
         } 
     break;

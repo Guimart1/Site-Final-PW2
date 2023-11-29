@@ -24,22 +24,22 @@
             $stmt->execute();
             return $stmt->fetchAll();
         }
-        public static function selectById($id){
+        public static function selectById($idBolo){
             $conexao = Conexao::conectar();
             $query = "SELECT * FROM tbBolo WHERE idBolo = ?";
             $stmt = $conexao->prepare($query);
-            $stmt->bindValue(1, $id);
+            $stmt->bindValue(1, $idBolo);
             $stmt->execute();
             return $stmt->fetch(PDO::FETCH_ASSOC);
         }
-        public static function delete($id){
+        public static function delete($idBolo){
             $conexao = Conexao::conectar();
             $query = "DELETE FROM tbBolo WHERE idBolo = ?";
             $stmt = $conexao->prepare($query);
-            $stmt->bindValue(1, $id);
+            $stmt->bindValue(1, $idBolo);
             return  $stmt->execute();
         }
-        public static function update($id, $bolo ){
+        public static function update($idBolo, $bolo ){
             $conexao = Conexao::conectar();
             $query = "UPDATE tbBolo SET 
             nomeBolo = ?, 
@@ -62,7 +62,7 @@
             $stmt->bindValue(7, $bolo->getEspecificacao());
             $stmt->bindValue(8, $bolo->getValor());
             $stmt->bindValue(9, $bolo->getFoto());
-            $stmt->bindValue(10, $id); // Certifique-se de que o ID seja o terceiro valor
+            $stmt->bindValue(10, $idBolo); // Certifique-se de que o ID seja o terceiro valor
             return $stmt->execute();
         }
     }

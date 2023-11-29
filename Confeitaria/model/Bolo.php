@@ -1,14 +1,14 @@
 <?php
 
 class Bolo{
-    public static Bolo $id, $nome, $sabor, $cobertura, $decoracao, $desc, $peso, $especificacao, $valor, $foto;
+    public static Bolo $idBolo, $nome, $sabor, $cobertura, $decoracao, $desc, $peso, $especificacao, $valor, $fotoBolo;
 
     
-    public function getId(){
-        return $this->id;
+    public function getIdBolo(){
+        return $this->idBolo;
     }
-    public function setId($id){
-        $this->id = $id;
+    public function setId($idBolo){
+        $this->idBolo = $idBolo;
     }
     public function setNome($nome){
         $this->nome = $nome;
@@ -59,11 +59,11 @@ class Bolo{
     public function getValor(){
         return $this->valor;
     }
-    public function setFoto($foto){
-        $this->foto = $foto;
+    public function setFotoBolo($fotoBolo){
+        $this->fotoBolo = $fotoBolo;
     }
     public function getFoto(){
-        return $this->foto;
+        return $this->fotoBolo;
     }
 
     public  function salvarImagem($novo_nome){

@@ -23,22 +23,22 @@
             $stmt->execute();
             return $stmt->fetchAll();
         }
-        public static function selectById($id){
+        public static function selectById($idAdm){
             $conexao = Conexao::conectar();
             $query = "SELECT * FROM tbAdm WHERE idAdm = ?";
             $stmt = $conexao->prepare($query);
-            $stmt->bindValue(1, $id);
+            $stmt->bindValue(1, $idAdm);
             $stmt->execute();
             return $stmt->fetch(PDO::FETCH_ASSOC);
         }
-        public static function delete($id){
+        public static function delete($idAdm){
             $conexao = Conexao::conectar();
             $query = "DELETE FROM tbAdm WHERE idAdm = ?";
             $stmt = $conexao->prepare($query);
-            $stmt->bindValue(1, $id);
+            $stmt->bindValue(1, $idAdm);
             return  $stmt->execute();
         }
-        public static function update($id, $admin ){
+        public static function update($idAdm, $admin ){
             $conexao = Conexao::conectar();
             $query = "UPDATE tbAdm SET 
             nomeAdm = ?, 
@@ -59,15 +59,15 @@
             $stmt->bindValue(6, $admin->getSenha());
             $stmt->bindValue(7, $admin->getFoto());
             $stmt->bindValue(8, $admin->getToken());
-            $stmt->bindValue(9, $id); // Certifique-se de que o ID seja o terceiro valor
+            $stmt->bindValue(9, $idAdm); // Certifique-se de que o ID seja o terceiro valor
             return $stmt->execute();
         }
-        public static function checkCredentials($email, $senha){
+        public static function checkCredentials($emailAdm, $senhaAdm){
             $conexao = Conexao::conectar();
             $query = "SELECT * FROM tbAdm WHERE emailAdm = ? and senhaAdm = ?";
             $stmt = $conexao->prepare($query);
-            $stmt->bindValue(1, $email);
-            $stmt->bindValue(2, $senha);
+            $stmt->bindValue(1, $emailAdm);
+            $stmt->bindValue(2, $senhaAdm);
             $stmt->execute();
             return $stmt->fetch(PDO::FETCH_ASSOC);
         }
