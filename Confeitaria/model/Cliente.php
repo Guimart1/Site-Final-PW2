@@ -40,6 +40,24 @@ class Cliente{
     public function getFotoCliente(){
         return $this->fotoCliente;
     }
+
+    public function salvarImagem($novo_nome){
+        //a foto vem com a extenção] $_FILES
+        if(empty($_FILES['fotoCliente']['size']) != 1){
+            //pegar as extensão do arquivo
+            if($novo_nome ==""){
+                $novo_nome = md5(time()).".jpg";
+            }
+            $diretorio = "../../img/cliente/";
+            $nomeCompleto = $diretorio.$novo_nome;
+
+            move_uploaded_file($_FILES['fotoCliente']['tmp_name'], $nomeCompleto);
+            return $novo_nome;
+        }else{
+            return $novo_nome;
+        }
+    }
+
     public function generateToken(){ 
         $token = bin2hex(random_bytes(16));
         return $token;
@@ -50,24 +68,6 @@ class Cliente{
     public function getTokenCliente(){
         return $this->tokenCliente;
     }
-
-    public  function salvarImagem($novo_nome){
-        //a foto vem com a extenção] $_FILES
-        if(empty($_FILES['foto']['size']) != 1){
-            //pegar as extensão do arquivo
-            if($novo_nome ==""){
-                $novo_nome = md5(time()).".jpg";
-            }
-            $diretorio = "../../img/user/";
-            $nomeCompleto = $diretorio.$novo_nome;
-
-            move_uploaded_file($_FILES['foto']['tmp_name'], $nomeCompleto);
-            return $novo_nome;
-        }else{
-            return $novo_nome;
-        }
-    }
-
 
 }
 ?>

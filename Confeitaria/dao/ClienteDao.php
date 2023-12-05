@@ -4,7 +4,7 @@
     class ClienteDao{
         public static function insert($cliente){
             $conexao = Conexao::conectar();
-            $query = "INSERT INTO tbCliente (nomeCliente, sobrenomeCliente, emailCliente, senhaCliente, fotoCliente, tokenCliente) VALUES (?,?,?,?,?,?,?,?)";
+            $query = "INSERT INTO tbCliente (nomeCliente, sobrenomeCliente, emailCliente, senhaCliente, fotoCliente, tokenCliente) VALUES (?,?,?,?,?,?)";
             $stmt = $conexao->prepare($query);
             $stmt->bindValue(1, $cliente->getNomeCliente());
             $stmt->bindValue(2, $cliente->getSobrenomeCliente());
@@ -43,7 +43,8 @@
             sobrenomeCliente = ?, 
             emailCliente = ?, 
             senhaCliente = ?, 
-            fotoCliente = ?, 
+            fotoCliente = ?,
+            tokenCliente = ?
             WHERE idCliente = ?";
             $stmt = $conexao->prepare($query);
             $stmt->bindValue(1, $cliente->getNomeCliente());

@@ -12,5 +12,9 @@
       <a class="link-dark" href="../bolo" style="text-decoration: none;"><i class="fas fa-key"></i>
         Produtos</a>
     </li>
+    <li class="fw-medium my-1">
+      <a class="link-dark" href="../cliente" style="text-decoration: none;"><i class="fas fa-key"></i>
+        Clientes</a>
+    </li>
   </ul>
 </div>

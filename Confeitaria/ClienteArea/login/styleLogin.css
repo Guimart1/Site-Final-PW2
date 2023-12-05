@@ -13,7 +13,7 @@ p, label {
 }
 
 .boloImg{
-    background-image: url(IMG/boloLogin.jpg);
+    background-image: url(../IMG/boloLogin.jpg);
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;

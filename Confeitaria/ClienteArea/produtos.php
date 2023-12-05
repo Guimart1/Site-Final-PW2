@@ -1,5 +1,5 @@
 <?php
-    require_once "BoloDao.php";
+    require_once "../dao/BoloDao.php";
     $bolos = BoloDao::selectAll();
 ?>
 
@@ -16,7 +16,13 @@
 </head>
 <body>
     <?php
-        include_once '../Components/header.php';
+    session_start();
+    if(isset($_SESSION["authClient"])){
+        $authClient = $_SESSION["authClient"];
+        include('./../Components/header-logado.php');
+    }else{
+        include('./../Components/header.php');
+    }
     ?>
 
     <div class="container-fluid d-flex align-items-center justify-content-center box" id="box">
@@ -29,10 +35,13 @@
                 <div class="card mt-4" style="width: 100%">
                     <img src="../img/bolos/<?=$imagem_User?>" class="card-img-top" alt="..." style="height: 250px;">
                     <div class="card-body">
-                      <h2 class="card-title fw-bold"><?=$produto[1]?></h2>
-                      <p class="card-text fs-3"><?=$produto[2]?></p>
+                        <h2 class="card-title fw-bold"><?=$produto[1]?></h2>
+                        <p class="card-text fs-3"><?=$produto[2]?></p>
                     </div>
-                  </div>
+                    <div class="  text-center  justify-content-center d-flex align-items-center pb-3" >
+                        <a class="btn btn-outline-secondary" href="produtoDesc.php?idBolo=<?=$produto[0]?>" role="button">Saiba Mais</a>
+                    </div>
+                </div>
             </div>
         <?php } ?>
         </div>

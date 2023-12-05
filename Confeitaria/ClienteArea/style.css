@@ -243,3 +243,7 @@ li::before {
     }
     
 }
+
+#coverChocolate {
+    background-image: url(IMG/padrao-de-chocolate-cartao-de-co.jpg);
+}

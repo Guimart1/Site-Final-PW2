@@ -9,7 +9,13 @@
 </head>
 <body class="vw-100">
     <?php
-    include_once '../Components/header.php'
+    session_start();
+    if(isset($_SESSION["authClient"])){
+        $authClient = $_SESSION["authClient"];
+        include('./../Components/header-logado.php');
+    }else{
+        include('./../Components/header.php');
+    }
     ?>
 
     <div class="container-fluid d-flex align-items-center box" id="box">
