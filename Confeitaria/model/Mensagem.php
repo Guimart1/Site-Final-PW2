@@ -1,14 +1,26 @@
 <?php
-class Mensagem{
-    public static Mensagem $msg;
+    class Mensagem{
+      public function setMensagem($mensagem, $tipo){
+        session_start();
+          $_SESSION["mensagem"] = $mensagem;
+          $_SESSION["tipo"] = $tipo;
+      }
+        
 
+      public function getMensagem(){
+        if(!empty($_SESSION["mensagem"])) {
+          return [
+            "mensagem" => $_SESSION["mensagem"],
+            "tipo" => $_SESSION["tipo"]
+          ];
+        } else {
+          return false;
+        }
+      }
 
-    public function setMensagem($msg){
-    $this->msg=$msg;
+      public function clearMensagem() {
+        $_SESSION["mensagem"] = "";
+        $_SESSION["tipo"] = "";
+      }
     }
-    public function getMensagem(){
-        return $this->msg;
-    }
-
-}
 ?>

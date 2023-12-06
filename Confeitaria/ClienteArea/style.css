@@ -247,3 +247,8 @@ li::before {
 #coverChocolate {
     background-image: url(IMG/padrao-de-chocolate-cartao-de-co.jpg);
 }
+@media screen and (min-width: 750px){
+    #boxSobre{
+        margin-top: 20%;
+    }
+}

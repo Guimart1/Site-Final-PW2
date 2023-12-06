@@ -6,7 +6,7 @@ $cliente = ClienteDao::checkCredentials($_POST['emailCliente'], $_POST['senhaCli
 
 if($cliente){
     $authClient = [
-        'id' => $cliente['idClient'],
+        'id' => $cliente['idCliente'],
         'nome' => $cliente['nomeCliente'],
         'email' => $cliente['emailCliente'],
         'img' => $cliente['fotoCliente'],

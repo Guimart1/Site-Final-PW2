@@ -29,7 +29,7 @@
     $bolo->setPeso($_POST['pesoBolo']);
     $bolo->setEspecificacao($_POST['especificacaoBolo']);
     $bolo->setValor($_POST['valorBolo']);
-    $bolo->setFotoBolo($bolo->salvarImagem($_POST['fotoBolo'])); 
+    $bolo->setFotoBolo($bolo->salvarImagem($_POST['foto'])); 
     try {
       $BoloDao = BoloDao::insert($bolo);
       $msg->setMensagem("Bolo Cadastrado com sucesso.", "bg-success");

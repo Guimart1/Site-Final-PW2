@@ -33,10 +33,6 @@
           <div class="col fs-3 fw-semibold">
             Lista de Clientes Cadastrados
           </div>
-          <div class="col text-end ">
-            <a class="btn btn-success px-3" role="button" aria-disabled="true" href="register.php"><i
-                class="fas fa-plus" aria-hidden="true"></i></a>
-          </div>
         </div>
         <div class=" row">
           <table class="table table-hover">
@@ -67,7 +63,7 @@
                   </form>
                 </td>
                 <td class="text-center ">
-                  <a class="dropdown-item" onclick="modalRemover(<?=$cliente[0]?>,'idDeletar')">
+                  <a class="dropdown-item" onclick="modalRemover(<?=$cliente[0]?>,'idDeletarCliente')">
                     <i class="fas fa-trash-alt fa-lg text-danger"></i>
                   </a>
                 </td>
@@ -91,7 +87,7 @@
         </div>
         <div class="modal-body  ">
           <form action="process.php" method="post">
-            <input type="hidden" class="form-control" id="idDeletar" name="idDeletar" type="text">
+            <input type="hidden" class="form-control" id="idDeletarCliente" name="idDeletarCliente" type="text">
             <input type="hidden" class="form-control" value="DELETE" name="acao" type="text">
             <p>Tem certeza que deseja excluir o item selcionado?
             <div class=" text-end">
@@ -104,7 +100,7 @@
     </div>
   </div>
   <?php
-    require_once("../../componentes/modal.php");
+    require_once("../../Components/modal.php");
   ?>
   <script type="text/javascript" src="http://code.jquery.com/jquery-3.0.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

@@ -68,7 +68,7 @@ class Bolo{
 
     public  function salvarImagem($novo_nome){
         //a foto vem com a extenção] $_FILES
-        if(empty($_FILES['fotoBolo']['size']) != 1){
+        if(empty($_FILES['foto']['size']) != 1){
             //pegar as extensão do arquivo
             if($novo_nome ==""){
                 $novo_nome = md5(time()).".jpg";
@@ -76,7 +76,7 @@ class Bolo{
             $diretorio = "../../img/bolos/";
             $nomeCompleto = $diretorio.$novo_nome;
 
-            move_uploaded_file($_FILES['fotoBolo']['tmp_name'], $nomeCompleto);
+            move_uploaded_file($_FILES['foto']['tmp_name'], $nomeCompleto);
             return $novo_nome;
         }else{
             return $novo_nome;

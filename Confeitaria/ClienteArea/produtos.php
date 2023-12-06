@@ -25,26 +25,32 @@
     }
     ?>
 
-    <div class="container-fluid d-flex align-items-center justify-content-center box" id="box">
-        <div class="row w-75 justify-content-evenly flex-wrap " id="barrier">        
+    <div class="container-fluid" id="box">
+        <div class="container" style="height: 80px;"></div>
+        <div class="d-flex w-100 h-100 justify-content-center">
+        <div class="row w-75 h-75 justify-content-evenly flex-wrap " id="barrier">        
             <?php foreach($bolos as $produto) { 
             $imagem_User = $produto[9];
         ?>
 
             <div class="col-md-5 col-sm-6 col-lg-4 col-xl-3 align-items-center mt-3 mb-3">
                 <div class="card mt-4" style="width: 100%">
-                    <img src="../img/bolos/<?=$imagem_User?>" class="card-img-top" alt="..." style="height: 250px;">
+                    <img src="../img/bolos/<?=$imagem_User?>" class="card-img-top" alt="..." style="height: 250px; object-fit:cover">
                     <div class="card-body">
-                        <h2 class="card-title fw-bold"><?=$produto[1]?></h2>
-                        <p class="card-text fs-3"><?=$produto[2]?></p>
+                        <h2 class="card-title fw-bold"> <?=$produto[1]?></h2>
+                        <p class="card-text fs-3 m-0">Sabor: <?=$produto[2]?></p>
+                        <p class="card-text fs-3 ">Preço: <span class="text-success"><?=$produto[8]?></span></p>
                     </div>
-                    <div class="  text-center  justify-content-center d-flex align-items-center pb-3" >
-                        <a class="btn btn-outline-secondary" href="produtoDesc.php?idBolo=<?=$produto[0]?>" role="button">Saiba Mais</a>
+                    <div class=" ms-3 pb-3" >
+                        <a class="btn btn-outline-secondary" href="produtoDesc.php?idBolo=<?=$produto[0]?>" role="button">Ver Produto</a>
                     </div>
                 </div>
             </div>
         <?php } ?>
         </div>
+        </div>
+        
+        <div class="container" style="height: 80px;"></div>
     </div>
 
     <?php include_once '../Components/footer.php' 

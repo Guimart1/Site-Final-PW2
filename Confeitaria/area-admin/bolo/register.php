@@ -98,21 +98,21 @@
                 <div class="row">
                   <div class="col-md-3">
                     <label for="decoracaoBolo" class="col-form-label">Decoração:</label>
-                    <input type="text" class="form-control" name="decoracaoBolo" maxlength="30" id="decoracaoBolo" value="<?=$decoracao_Bolo?>" required>
+                    <input type="text" class="form-control" name="decoracaoBolo" maxlength="50" id="decoracaoBolo" value="<?=$decoracao_Bolo?>" required>
                     <div class="invalid-feedback">
                       Decoração inválida
                     </div>
                   </div>
                   <div class="col-md-6">
                     <label for="descBolo" class="col-form-label">Descrição:</label>
-                    <input type="text" class="form-control" name="descBolo" maxlength="100" value="<?=$desc_Bolo?>" required>
+                    <input type="text" class="form-control" name="descBolo" maxlength="250" value="<?=$desc_Bolo?>" required>
                     <div class="invalid-feedback">
                       Descrição Inválida
                     </div>
                   </div>
                   <div class="col-md-3">
                     <label for="pesoBolo" class="col-form-label">Peso:</label>
-                    <input type="number" class="form-control" name="pesoBolo" value="<?=$peso_Bolo?>"
+                    <input type="number" class="form-control" name="pesoBolo" max="100" value="<?=$peso_Bolo?>"
                       id="pesoBolo" required>
                     <div class="invalid-feedback">
                       Peso Inválido
@@ -127,13 +127,13 @@
                 </div>
                 <div class="col-md-6">
                     <label for="valorBolo" class="col-form-label">Valor:</label>
-                    <input type="number" class="form-control" name="valorBolo" maxlength="100" value="<?=$valor_Bolo?>" required>
+                    <input type="number" class="form-control" name="valorBolo" max="1000" value="<?=$valor_Bolo?>" required>
                     <div class="invalid-feedback">
                       Valor Inválido
                     </div>
                 <div class="row mt-5 ">
                   <div class="col-md-2">
-                    <input type="file" id="fotoBolo" name="fotoBolo" accept="image/*" class="custom-file-input">
+                    <input type="file" id="foto" name="foto" accept="image/*" class="custom-file-input">
                   </div>
                   <div class=" text-end  col-md-10">
                   <a class=" btn btn-primary px-3" role="button" aria-disabled="true" href="index.php">Voltar</i></a>

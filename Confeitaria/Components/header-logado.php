@@ -18,12 +18,12 @@
             data-bs-toggle="dropdown" aria-expanded="false">
             <img src="../img/cliente/<?=$authClient['img']? $authClient['img'] : 'padrao.png'?>" alt="mdo" width="42" height="42" class="rounded-circle">
         </a>
-        <ul class="dropdown-menu text-small">
-            <a class="dropdown-item" href="#"><?=$authClient['nome']?></a>
-            <li><a class="fs-5" href="#" style="text-decoration: none;"> Perfil</a></li>
-            <li><a class="fs-5" href="#" style="text-decoration: none;"> Favoritos</a></li>
+        <ul class="dropdown-menu text-small" style="color: #010101;">
+            <a class="dropdown-item fs-4" href="#"><?=$authClient['nome']?></a>
+            <li><a class="fs-5" href="#" style="text-decoration: none; color: #010101;"> Perfil</a></li>
+            <li><a class="fs-5" href="#" style="text-decoration: none; color: #010101;"> Favoritos</a></li>
 
-            <li><a class="fs-5" href="../ClienteArea/login/logout.php" style="text-decoration: none;"> Sign out</a></li>
+            <li><a class="fs-5" href="../ClienteArea/login/logout.php" style="text-decoration: none;color: #010101;" > Sign out</a></li>
         </ul>
     </div>
     <i class="fas fa-bars ms-5" id="menu-bar"></i>

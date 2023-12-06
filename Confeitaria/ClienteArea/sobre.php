@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    
+    <div class="container">
     <?php
     session_start();
     if(isset($_SESSION["authClient"])){
@@ -20,13 +20,38 @@
         include('./../Components/header.php');
     }
     ?>
+    </div>
 
-    <div class="container-fluid d-flex align-items-center justify-content-center box" id="box">
-        <div class="container-fluid bg-light w-50 rounded" id="boxSobre" style="height: 600px;">
-            <h1 class="text-center mt-4 fw-bold">Sobre Nós</h1>
-            <hr>
-            <p class="p-4">oii quer.... um bollo? bolleto!</p>
+    <div class="container-fluid" id="box">
+        <div class="container" style="height: 80px;"></div>
+        <div class="d-flex w-100 h-100 justify-content-center">
+        <div class="container-fluid bg-light w-75 rounded d-flex align-items-center justify-content-between pt-3 pb-3 mb-5 mt-5" id="boxSobre">
+        <div class="row">
+
+                <div class="col-md">
+                <img src="IMG/closeup-bolo.jpg" alt="" class="pt-4 rounded mt-4" style="width: 100%;">
+                </div>
+                <div class="col-md">
+
+                <h1 class="fw-bolder mb-3 p-5 fs-1">Sobre Nós</h1>
+                <p class="p-5 fs-4">Bolletos é uma empresa de bolos fundada por Maria José Bolettos em 
+                    1973 no bairro de Guaianazes no extremo leste de São Paulo.<br><br> Tudo começou com Maria 
+                    fazendo bolos para seus vizinhos, assim ajudando seu marido a cuidar de suas crianças. 
+                    Não demorou para estes vizinhos indicarem os deliciosos bolos de dona Maria para seus 
+                    parentes e amigos, logo se espalhando por todo o bairro e São Paulo.
+                    <br><br>
+                    Em 2013 a nossa matriarca nos deixou, mas permanecemos nos comprometendo com a entrega 
+                    de delicias para todos os públicos.
+
+                    Há 50 anos trabalhamos com tradição e qualidade para todos os habitantes da capital de São Paulo,
+                    venha conhecer mais dos nossos bollos!</p>
+
+                </div>
+
+            </div>
         </div>
+        </div>
+    </div>
     </div>
 
     <?php include_once '../Components/footer.php' 

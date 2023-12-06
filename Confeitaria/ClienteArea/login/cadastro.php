@@ -42,7 +42,7 @@ session_start();
                     <div class="row">
                         <div class="col d-flex align-content-center justify-content-center">
                             <div class="bg-white text-center mt-2 rounded" style="height: fit-content;">
-                                <img src="../../img/user/padrao.png" alt="" style="width: 70%;">
+                                <img id="preview" src="../../img/user/padrao.png" alt="" style="width: 70%;">
                             </div>
                         </div>
                         <div class="col">
@@ -54,9 +54,9 @@ session_start();
                     </div>
 
                         <div class="mt-3 mb-3">
-                            <input type="file" id="fotoCliente" name="fotoCliente" accept="image/*" class="custom-file-input">
+                            <input type="file" id="foto" name="foto" accept="image/*" class="custom-file-input">
                         </div>
-                        <p>Já possui um cadastro? <a href="./login.html">Faça Login</a></p>
+                        <p>Já possui um cadastro? <a href="./login.php">Faça Login</a></p>
                         <button type="submit" class="btn btn-primary mt-1" value="Salvar">Cadastrar</button>
                 </form>
 
@@ -70,5 +70,11 @@ session_start();
     <script src="index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.0.0.min.js"></script>
+
+  <!-- Para usar Mascara  -->
+  <script type="text/javascript" src="./../../js/jquery.mask.min.js"></script>
+  <script type="text/javascript" src="./../../js/personalizar.js"></script>
+  <script type="text/javascript" src="./../../js/modal.js"></script>
 </body>
 </html>

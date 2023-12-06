@@ -34,7 +34,7 @@ echo '
                 <li class=" mb-1"><a href="produtos.html">Produtos</a></li>
                 <li class=" mb-1"><a href="sobre.html">Sobre Nós</a></li>
                 <li class=" mb-1"><a href="contato.html">Contato</a></li>
-                <li class=" mb-1"><a href="../area-admin/home/index.php">Admin</a></li>
+                <li class=" mb-1"><a href="../area-admin/login/login.php">Admin</a></li>
             </ul>
     </div>  
 </div>
