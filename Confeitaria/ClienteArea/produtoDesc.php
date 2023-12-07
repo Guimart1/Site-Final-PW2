@@ -122,7 +122,7 @@
     <?php }; ?>
 
         <?php if($avaliacoes){?>
-            <h1 class="ps-5 border-bottom mb-4">Avaliações:</h1>
+            <h1 class="ps-5 border-bottom pb-4">Avaliações:</h1>
         <?php } else { ?>
             <hr>
             <h1 class="ps-5">Não há avaliações no momento, comece fazendo a sua!</h1>

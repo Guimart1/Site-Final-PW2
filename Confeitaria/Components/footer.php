@@ -31,9 +31,9 @@ echo '
         <h2 class="mb-5 fw-bold">Acesso Rápido</h2>
             <ul class="listFooter fs-5" id="listFooter">
                 <li class=" mb-1"><a href="">Home</a></li>
-                <li class=" mb-1"><a href="produtos.html">Produtos</a></li>
-                <li class=" mb-1"><a href="sobre.html">Sobre Nós</a></li>
-                <li class=" mb-1"><a href="contato.html">Contato</a></li>
+                <li class=" mb-1"><a href="produtos.php">Produtos</a></li>
+                <li class=" mb-1"><a href="sobre.php">Sobre Nós</a></li>
+                <li class=" mb-1"><a href="contato.php">Contato</a></li>
                 <li class=" mb-1"><a href="../area-admin/login/login.php">Admin</a></li>
             </ul>
     </div>  

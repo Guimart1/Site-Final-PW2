@@ -1,7 +1,7 @@
 <?php
 echo '<header class="header">
 <div class="logoContent">
-    <a href="#" class="logo"><img src="IMG/logo.png" alt=""></a>    
+    <a href="../ClienteArea/index.php" class="logo"><img src="IMG/logo.png" alt=""></a>    
     <h1 class="logoName" style="color: #e1e1e1;">Bolletos</h1>
 </div>
 

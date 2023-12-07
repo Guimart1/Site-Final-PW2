@@ -34,6 +34,7 @@ html::-webkit-scrollbar-thumb{
     border-radius: 5rem;
 }
 
+
 .header{
     top: 0;right: 0;left: 0;
     display: flex;
@@ -237,12 +238,7 @@ li::before {
     color: rgb(253, 33, 33);
     transform: translateX(5px);
 }
-@media screen and (max-width: 600px) {
-    #barrier {
-        margin-top: 10%;
-    }
-    
-}
+
 
 #coverChocolate {
     background-image: url(IMG/padrao-de-chocolate-cartao-de-co.jpg);

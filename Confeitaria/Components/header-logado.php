@@ -1,7 +1,7 @@
 
 <header class="header">
 <div class="logoContent">
-    <a href="#" class="logo"><img src="IMG/logo.png" alt=""></a>    
+    <a href="../ClienteArea/index.php" class="logo"><img src="IMG/logo.png" alt=""></a>    
     <h1 class="logoName" style="color: #e1e1e1;">Bolletos</h1>
 </div>
 
@@ -20,8 +20,7 @@
         </a>
         <ul class="dropdown-menu text-small" style="color: #010101;">
             <a class="dropdown-item fs-4" href="#"><?=$authClient['nome']?></a>
-            <li><a class="fs-5" href="#" style="text-decoration: none; color: #010101;"> Perfil</a></li>
-            <li><a class="fs-5" href="#" style="text-decoration: none; color: #010101;"> Favoritos</a></li>
+            <li><a class="fs-5" href="../ClienteArea/favorito.php" style="text-decoration: none; color: #010101;"> Favoritos</a></li>
 
             <li><a class="fs-5" href="../ClienteArea/login/logout.php" style="text-decoration: none;color: #010101;" > Sign out</a></li>
         </ul>
