@@ -21,12 +21,12 @@
 
 <body style="justify-content: center; align-items: center; height: 100vh ">
   <?php 
-      include('./../../componentes/header-adm.php');
+      include('./../../Components/header-adm.php');
   ?>
   <div class="container-fluid" style="height: 90vh">
     <div class="row h-100">
       <?php 
-      include('./../../componentes/menu-adm.php');
+      include('./../../Components/menu-adm.php');
       ?>
       <div class="col-md-10  p-4 borber">
         <div class="row align-items-center mb-4">
@@ -86,7 +86,7 @@
     <div class=" modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header bg-danger text-white">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Excluir Usuário</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Excluir Bolo?</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body  ">

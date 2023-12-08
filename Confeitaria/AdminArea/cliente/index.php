@@ -1,7 +1,7 @@
 <?php 
 
-  require_once '../../dao/AdminDao.php'; 
-  $users = AdminDao::selectAll();
+  require_once '../../dao/ClienteDao.php'; 
+  $clientes = ClienteDao::selectAll();
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FilmeOn - Adm</title>
+  <title>Lista de Clienetes - Bolletos</title>
   <link rel="short icon" href="./../../img/site/logo.png" />
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,21 +21,17 @@
 
 <body style="justify-content: center; align-items: center; height: 100vh ">
   <?php 
-      include('./../../componentes/header-adm.php');
+      include('./../../Components/header-adm.php');
   ?>
   <div class="container-fluid" style="height: 90vh">
     <div class="row h-100">
       <?php 
-      include('./../../componentes/menu-adm.php');
+      include('./../../Components/menu-adm.php');
       ?>
       <div class="col-md-10  p-4 borber">
         <div class="row align-items-center mb-4">
           <div class="col fs-3 fw-semibold">
-            Lista de Usuário
-          </div>
-          <div class="col text-end ">
-            <a class="btn btn-success px-3" role="button" aria-disabled="true" href="register.php"><i
-                class="fas fa-plus" aria-hidden="true"></i></a>
+            Lista de Clientes Cadastrados
           </div>
         </div>
         <div class=" row">
@@ -43,31 +39,21 @@
             <thead>
               <tr>
                 <th class="col-md-1">ID</th>
-                <th class="col-md-1">Nascimento</th>
-                <th class="col-md-3">Nome </th>
-                <th class="col-md-3">E-mail</th>
-                <th class="col-md-2">CPF</th>
-                <th class="text-center col-md-1">Alterar</th>
+                <th class="col-md-1">Nome</th>
+                <th class="col-md-3">Sobrenome</th>
+                <th class="col-md-3">Email</th>
+                <th class="col-md-2">Senha</th>
                 <th class="text-center col-md-1">Excluir</th>
               </tr>
-              <?php foreach($users as $adm) { ?>
+              <?php foreach($clientes as $cliente) { ?>
               <tr>
-                <td><?=$adm[0]?></td>
-                <td><?= date('d/m/Y', strtotime($adm[3]));  ?></td>
-                <td><?=$adm[1]?> <?=$adm[2]?></td>
-                <td><?=$adm[4]?></td>
-                <td><?=$adm[7]?></td>
-                <td class="text-center">
-                  <form action="process.php" method="POST">
-                    <input type="hidden" class="form-control" id="acao" name="acao" value="SELECTID">
-                    <input type="hidden" class="form-control" id="id" name="id" value="<?=$adm[0]?>">
-                    <button type="submit" class="dropdown-item" ><i
-                        class="fas fa-edit fa-lg text-secondary"></i>
-                    </button>
-                  </form>
-                </td>
+                <td><?=$cliente[0]?></td>
+                <td><?=$cliente[1]?></td>
+                <td><?=$cliente[2]?></td>
+                <td><?=$cliente[3]?></td>
+                <td><?=$cliente[4]?></td>
                 <td class="text-center ">
-                  <a class="dropdown-item" onclick="modalRemover(<?=$adm[0]?>,'idDeletar')">
+                  <a class="dropdown-item" onclick="modalRemover(<?=$cliente[0]?>,'idDeletarCliente')">
                     <i class="fas fa-trash-alt fa-lg text-danger"></i>
                   </a>
                 </td>
@@ -91,7 +77,7 @@
         </div>
         <div class="modal-body  ">
           <form action="process.php" method="post">
-            <input type="hidden" class="form-control" id="idDeletar" name="idDeletar" type="text">
+            <input type="hidden" class="form-control" id="idDeletarCliente" name="idDeletarCliente" type="text">
             <input type="hidden" class="form-control" value="DELETE" name="acao" type="text">
             <p>Tem certeza que deseja excluir o item selcionado?
             <div class=" text-end">

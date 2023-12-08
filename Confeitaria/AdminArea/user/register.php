@@ -1,5 +1,5 @@
 <?php 
-  require_once("../../componentes/modal.php");
+  require_once("../../Components/modal.php");
   require_once '../../dao/AdminDao.php';
   if(!empty($_POST)){
     $id_User = $AdminDao['idAdm'];
@@ -40,12 +40,12 @@
 
 <body style="justify-content: center; align-items: center; height: 100vh ">
   <?php 
-      include('./../../componentes/header-adm.php');
+      include('./../../Components/header-adm.php');
   ?>
   <div class="container-fluid" style="height: 90vh">
     <div class="row h-100">
       <?php 
-      include('./../../componentes/menu-adm.php');
+      include('./../../Components/menu-adm.php');
       ?>
       <div class="col-md-10  p-4 borber">
         <div class="card">

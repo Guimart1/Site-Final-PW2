@@ -21,13 +21,14 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="container d-flex justify-content-center align-items-center h-100 w-100">
-                    <img src="../img/cliente/<?=$authClient['img']?>" alt="" style="width: 60%; border-radius:50%;">
+                    <img src="../img/cliente/<?=$authClient['img']?>" alt="" style="width: 60%; border-radius: calc(100-10px); ">
                 </div>
             </div>
             <div class="col">
                 <h1 class="mt-5" style="font-size: 3em;">Olá <?=$authClient['nome']?>, <br>Veja seus bolos favoritos!</h1>
-                <h2 class="mt-4">Você possui 3 bolos favoritos:</h2>
+                <h2 class="mt-4">Você possui x bolos favoritos:</h2>
             </div>
+            <p class="text-center">Função de Favoritar incompleta.</p>
         </div>
     </div>
     <div class="container-fluid h-100 w-100 text-center mt-5 d-flex justify-content-center align-items-center p-0 m-0" style="height: fit-content;">

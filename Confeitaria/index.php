@@ -1,3 +1,3 @@
 <?php
-  header("Location: area-cliente/home.php");
+  header("Location: ClienteArea/index.php");
 ?>

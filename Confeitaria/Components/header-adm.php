@@ -20,11 +20,7 @@ $auth = $_SESSION["auth"];
           <img src="./../../img/user/<?=$auth['img']? $auth['img'] : 'padrao.png';?>" alt="mdo" width="32" height="32" class="rounded-circle">
         </a>
         <ul class="dropdown-menu text-small">
-          <li><a class="dropdown-item" href="#">Perfil</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="#">Sign out</a></li>
+          <li><a class="dropdown-item" href="../login/logout.php">Sign out</a></li>
         </ul>
       </div>
     </div>

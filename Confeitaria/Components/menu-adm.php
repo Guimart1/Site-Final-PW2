@@ -16,5 +16,9 @@
       <a class="link-dark" href="../cliente" style="text-decoration: none;"><i class="fas fa-key"></i>
         Clientes</a>
     </li>
+    <li class="fw-medium my-1">
+      <a class="link-dark" href="../avaliacao" style="text-decoration: none;"><i class="fas fa-key"></i>
+        Avaliações</a>
+    </li>
   </ul>
 </div>

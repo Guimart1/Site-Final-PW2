@@ -32,9 +32,18 @@
                             <input class="form-control"  type="password" name="senhaCliente" id="" required>
                         </div>
                         <p>Não possui um cadastro? <a href="cadastro.php">Cadastre-se!</a></p>
+                        <?php
+                          if(isset($_GET['status']) && $_GET['status']=="erro1"){
+                        ?>
+                          <div class="text-danger">
+                              Usuário ou senha inválido(s)
+                          </div>
+                        <?php
+                          }
+                        ?>
                         <button type="submit" class="btn btn-primary mt-1" value="Salvar">Entrar</button>
                 </form>
-
+    
             </div>
         </div>
     </div>
